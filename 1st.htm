@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- cssgridgarden.com -->
+    <!-- .item.item_${$}*8 -->
+    <div class="container">
+      <div class="item item_1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
+        consequuntur blanditiis mollitia alias, at ipsam voluptatibus quisquam
+        praesentium aspernatur officia totam error temporibus beatae sit culpa.
+        Quis excepturi dolorum quaerat.
+      </div>
+      <div class="item item_2">2</div>
+      <div class="item item_3">3</div>
+      <div class="item item_4">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+        maiores enim officiis ullam fugiat nisi laborum amet, fuga, quaerat
+        libero ab id impedit itaque. Voluptatibus sunt iusto odio. Eligendi,
+        ipsum.
+      </div>
+      <div class="item item_5">5</div>
+      <div class="item item_6">6</div>
+      <div class="item item_7">7</div>
+      <div class="item item_8">8</div>
+    </div>
+
+    <style>
+      .container {
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: 100px 200px; */
+        display: grid;
+        /* grid-column-gap: 10px;
+        grid-row-gap: 10px; */
+        grid-gap: 10px;
+        grid-auto-rows: minmax(50px, auto);
+        /* - размер для строк,для которых он явно не указан*/
+        /* justify-content: center;
+        align-content: center; */
+        /* justify-items: center; */
+        /* align-items: start; */
+        /* - выравнивание относительно самой ячейки */
+      }
+      .item {
+        padding: 10px;
+        border: 1px solid black;
+        /* overflow:scroll; */
+      }
+      .item_3 {
+        /* justify-self: center;
+        align-self: end; */
+        /* grid-column-start: 1; -задание начала ячейки в строке */
+        /* grid-column-end: 3; */
+        grid-column: 1 / 3;
+        /* grid-row-start: 1; -задание начала ячейки в столбце по высоте */
+        /* grid-row-end: 2; */
+        grid-row: 2/4;
+      }
+      /* .item_7{
+        grid-row-start: 1; 
+        grid-column-start: 2;
+      } */
+    </style>
+  </body>
+</html>
